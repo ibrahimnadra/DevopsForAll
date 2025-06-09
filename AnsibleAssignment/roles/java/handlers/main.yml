@@ -1,0 +1,4 @@
+- name: Restart Java-dependent services
+  service:
+    name: some_java_service
+    state: restarted

@@ -1,0 +1,12 @@
+- name: Install MySQL server
+  apt:
+    name: mysql-server
+    state: present
+  when: java_install is succeeded
+
+- name: Start and enable MySQL service
+  service:
+    name: mysql
+    state: started
+    enabled: true
+  when: java_install is succeeded
